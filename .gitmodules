@@ -1,0 +1,12 @@
+[submodule "hobby-gallery"]
+	path = hobby-gallery
+	url = https://github.com/2806shreya/hobby-gallery
+[submodule "TO-DO-List-App"]
+	path = TO-DO-List-App
+	url = https://github.com/2806shreya/TO-DO-List-App
+[submodule "QUIZ-GAME"]
+	path = QUIZ-GAME
+	url = https://github.com/2806shreya/QUIZ-GAME
+[submodule "youtube-replica-page"]
+	path = youtube-replica-page
+	url = https://github.com/2806shreya/youtube-replica-page
