@@ -1,0 +1,123 @@
+/* Reset and base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* dark blue gradient */
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Quiz container */
+.quiz-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+  width: 400px;
+  max-width: 90vw;
+  padding: 30px 40px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-size: 2.2rem;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+#question {
+  font-size: 1.3rem;
+  font-weight: 600;
+  min-height: 70px;
+  margin-bottom: 25px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.btn-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn {
+  padding: 14px 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.btn:hover:not(.correct):not(.wrong) {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.4);
+}
+
+.btn.correct {
+  background-color: #28a745;
+  box-shadow: 0 6px 15px #1e7e34;
+  color: white;
+}
+
+.btn.wrong {
+  background-color: #dc3545;
+  box-shadow: 0 6px 15px #a71d2a;
+  color: white;
+}
+
+.next-btn {
+  margin-top: 30px;
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background: #ffc107;
+  color: #212529;
+  box-shadow: 0 6px 15px #cc9a06;
+  display: none;
+}
+
+.next-btn:hover {
+  background: #e0a800;
+  box-shadow: 0 6px 20px #b68600;
+}
+
+.hide {
+  display: none;
+}
+
+#result-container h2 {
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+#restart-btn {
+  background: #17a2b8;
+  box-shadow: 0 6px 15px #117a8b;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+#restart-btn:hover {
+  background: #138496;
+  box-shadow: 0 6px 20px #0f6674;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Quiz Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Quiz Game</h1>
+    <div id="question-container">
+      <div id="question">Question text</div>
+      <div id="answer-buttons" class="btn-grid"></div>
+      <div id="feedback" style="min-height: 24px; margin-top: 15px; font-weight: 600; font-size: 1.1rem;"></div>
+    </div>
+    <button id="next-btn" class="next-btn btn">Next</button>
+    <div id="result-container" class="hide">
+      <h2>Your score: <span id="score"></span>/<span id="total"></span></h2>
+      <button id="restart-btn" class="btn">Restart Quiz</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
