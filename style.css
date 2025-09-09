@@ -44,6 +44,16 @@ nav ul li:hover {
   transform: translateY(-3px);
 }
 
+/* Hero Section (Centering photo & quote) */
+header {
+  min-height: 100vh;             /* Full screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;       /* Vertical center */
+  align-items: center;           /* Horizontal center */
+  text-align: center;
+}
+
 /* Profile Photo */
 .profile-pic {
   width: 200px;
@@ -54,6 +64,8 @@ nav ul li:hover {
   box-shadow: 0 0 30px rgba(138, 180, 248, 0.6);
   margin: 20px auto;
   transition: transform 0.3s, box-shadow 0.3s;
+  animation: zoomIn 1s ease forwards;
+  opacity: 0;
 }
 
 .profile-pic img {
@@ -86,6 +98,8 @@ section {
   background-color: #1c1c2e;
   border-radius: 12px;
   transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
 }
 
 section:hover {
@@ -101,12 +115,23 @@ section:hover {
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
 }
 
 .card:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   background-color: #3b3b5a;
+}
+
+/* Make the whole card link look natural */
+.card a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
 }
 
 /* Links */
@@ -129,6 +154,8 @@ a:hover {
   background-color: #1c1c2e;
   border-radius: 12px;
   transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
 }
 
 #achievements:hover {
@@ -150,6 +177,8 @@ a:hover {
   padding: 15px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
 }
 
 .certificate:hover {
@@ -176,6 +205,15 @@ a:hover {
 #contact p {
   font-size: 1.1rem;
   margin: 0.5rem 0;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #1c1c2e;
+  color: #aaa;
+  font-size: 0.9rem;
 }
 
 /* Responsive Styles */
@@ -220,4 +258,26 @@ a:hover {
   h3 {
     font-size: 1.2rem;
   }
+}
+
+/* 🔥 Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
